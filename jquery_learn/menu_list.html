@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>菜单栏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+
+        *{
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .celarFix::before, .celarFix::after{
+
+            content: "";
+            display: table;
+
+        }
+
+        .celarFix::after{
+
+            clear: both;
+        }
+
+        .menuList{
+            width: 150px;
+            background-color: bisque;
+            margin: 0 auto;
+        }
+
+        .menu{
+
+            width: 150px;
+            /* background-color: cadetblue; */
+            margin: 0 auto;
+        }
+
+        .menu h1{
+
+            width: 150px;
+            /* background-color: cadetblue; */
+            margin: 0 auto;
+            background-color: yellowgreen;
+            text-align: center;
+            font-size: 18px;
+            /* margin: 3px; */
+            border-bottom: 2px solid red;
+        }
+
+
+        .menu ul{
+
+            display: none;
+            list-style: none;
+            text-align: center;
+            /* margin: 5px; */
+            background-color: azure;
+            border: 2px solid darkcyan;
+
+        }
+
+
+        .menu ul.menus{
+            background-color: darkkhaki;
+            display: block;
+        }
+
+
+        
+
+        .menu ul li:hover{
+
+            background-color: palegreen;
+        }
+
+
+
+
+
+    </style>
+
+    <script src="/Volumes/MacPod/jquery_learn/jqoery-line.js"></script>
+    <script >
+
+        $(function(){
+
+            $('h1').click(function () { 
+                
+                // $(this).next().toggleClass('menus');
+                // $(this).next().addClass('menus').siblings().removeClass('menus');
+                $(this).next().slideToggle();
+
+                // $(this).next().slideDown().parent().children('ul').slideUp();
+            });
+
+        });
+
+
+    
+    </script>
+
+
+</head>
+<body>
+
+    <div class="menuList">
+
+        <div class="menu">
+
+            <h1>水果</h1>
+            <ul>
+                <li>香蕉</li>
+                <li>栗子</li>
+                <li>苹果</li>
+            </ul>
+
+            <h1>价格</h1>
+            <ul>
+                <li>20￥</li>
+                <li>80￥</li>
+                <li>120￥</li>
+            </ul>
+
+            <h1>地址</h1>
+            <!-- 尚志大街 88 - 90 号 ， 13633621860 -->
+            <ul>
+                
+                <li>北京</li>
+                <li>上海</li>
+                <li>广州</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

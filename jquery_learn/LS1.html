@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Volumes/MacPod/jquery_learn/jqoery-line.js">
+    <title>LS-ONE jquery</title>
+    <style>
+        .button{
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+        .anotherClass{
+            background-color: red;
+        }
+
+
+        .box{
+
+            width: 800px;
+            height: 500px;
+            background-color: beige;
+        }
+
+        .sty{
+
+            background-color: yellow;
+
+        }
+
+        .btn{
+
+            width: 100px;
+            height: 50px;
+            background-color: coral;
+
+        }
+
+    </style>
+    <script src="/Volumes/MacPod/jquery_learn/jqoery-line.js"></script>
+    <script>
+
+        //方法 一 基础语法是：$(selector).action()
+
+        $(document).ready(function(){
+
+
+        });
+
+        // 方法 二 将获取元素的语句写到页面头部，会因为元素还没有加载而出错，jquery提供了ready方法解决这个问题，它的速度比原生的 window.onload 更快。
+        $(function(){
+
+
+            // $('.jtext').css({background:'red', width:"1000px", color:"white"});
+
+            // alert(le);
+
+            $('div').has('p').css('fontSize','40px');
+
+            // alert($('p').css('width'));
+
+            $('.button').click(function(){
+
+                $(this).addClass('anotherClass').siblings().removeClass('anotherClass');
+
+                alert($(this).index());
+
+
+            });
+
+
+            
+
+            $('.btn').click(function(){
+
+                $('.box').toggleClass('sty');
+
+            });
+
+            
+
+
+
+        });
+
+
+
+    
+    </script>
+
+
+</head>
+<body>
+
+    <div class="jtext">
+        
+        <h1>
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            
+        </h1> 
+
+        <ul class="list">
+            <input class="button anotherClass" type="button" value="首页">
+            <input class="button" type="button" value="价钱">
+            <input class="button" type="button" value="地址">
+        </ul> 
+
+        <button class="btn">按钮</button>
+
+        <div class="box"></div>
+
+
+            
+    </div>
+    
+    
+</body>
+</html>

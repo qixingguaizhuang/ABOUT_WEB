@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <style>
+
+        .box{
+            width: 20px;
+            height: 20px;
+            background-color: cadetblue;
+        }
+    </style>
+
+    <script src="/Volumes/MacPod/jquery_learn/jqoery-line.js"></script>
+    <script>
+
+        $(function () {
+            //属性设置，参数{par1:1,par2:2}  speed 设置，时间 ms  动画曲线设置 swing ，回调函数
+            $('#div1').animate({width:'200px',height:'200px'},5000,function () { 
+
+                // alert('加载完了！')
+
+                $(this).animate({marginLeft:'500px'},1000)
+
+
+
+
+             });
+
+
+        })
+    
+    
+    </script>
+</head>
+
+
+<body>
+
+    <div id="div1" class="box">
+    </div>
+    
+</body>
+</html>

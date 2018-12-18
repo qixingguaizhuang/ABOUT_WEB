@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>置顶菜单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/Volumes/MacPod/gitPod/jquery_learn/jqoery-line.js"></script>
+    <script>
+
+        $(function () {
+            //jq 函数 scroll 滑动条监听，滑动距离判断
+            $(window).scroll(function () { 
+
+                var $line = $(document).scrollTop();
+
+                if ($line>220) {
+
+                    $(".menu-nav").css({position:'fixed',left:'50%',top:'0px',marginLeft:'-450px',background:'red'});
+                    $('.menu-fu').show();
+
+
+                    
+                } else {
+
+                    $(".menu-nav").css({position:'static',marginLeft:'auto',background:'orange'});
+                    $('.menu-fu').hide();
+
+
+                }
+
+                if ($line>700) {
+                        $('.top').fadeIn();
+
+
+                    
+                    } else {
+                        $('.top').fadeOut();
+                    }
+
+
+                $('.top').click(function () { 
+                        $('html,body').animate({'scrollTop':0});
+                    });     
+        
+            });
+
+
+            
+        });
+    
+    </script>
+
+    <style>
+        *{padding: 0;margin: 0}
+        .logo{width: 900px;height: 220px; background-color: rgb(157, 157, 158);color: thistle;margin: 0 auto;}
+        .menu-nav{width: 900px;height: 80px;background-color: orange;margin: 0 auto;}
+        .menu-fu{width: 900px;height: 80px;background-color: orange;margin: 0 auto;display: none;}
+        #content_d{width: 900px;height: 1200px;background-color: palevioletred;color: saddlebrown;margin: 0 auto;}
+        #content_d .tit{width: 900px;height: 1200px;padding-top: 50px;}
+        .tit p{margin-top: 30px; text-align: center;font-size: 30px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+        .top{background-color: salmon;width: 80px;height: 80px; right: 80px;display: none;bottom: 50px;position:fixed;}
+    </style>
+
+</head>
+<body>
+
+    <div class="logo"> logo 显示 </div>
+    <div class="menu-nav">导航栏</div>
+    <div class="menu-fu">导航栏</div>
+    <div id="content_d">
+
+        <div class="tit">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <p>Numquam autem quidem quia consequatur rerum esse sed, </p>
+            <p>voluptatum sapiente quam suscipit, eum odio debitis beatae repudiandae! </p>
+            <p>Sunt in recusandae quasi eos.</p>
+        </div>
+
+        <button class="top">返回</button>
+    </div>
+    
+</body>
+</html>

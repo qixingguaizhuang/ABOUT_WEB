@@ -1,0 +1,257 @@
+body,ul{padding: 0;margin: 0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+
+.fixClear::after, .fixClear::before{
+
+    content: "";
+    display: table;
+}
+
+.fixClear::after{
+
+    clear: both;
+}
+
+
+/* 导航栏 */
+
+.nav{
+
+    /* float: left; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(19, 18, 18);
+    overflow: hidden;
+    z-index:9999;
+    
+}
+
+.nav-cell{
+
+    width: 100%;
+    height: 70px;
+    /* text-align: center; */
+    margin: 5px 0;
+    /* background-color: antiquewhite; */
+}
+
+.logo{
+    
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    left:20px;
+    top: 20px;
+
+    /* background-color: darkseagreen; */
+}
+
+.logo img{
+
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.navTitle {
+
+    position: fixed;
+    width: 220px;
+    height: 40px;
+
+    left:50%;
+    margin-left: -110px;
+    top: 20px;
+    /* background-color: rgb(135, 177, 131); */
+    text-align: center;
+}
+
+.navTitle span{
+
+    line-height: 40px;
+    font-weight: bolder;
+    /* color: rgb(248, 250, 252); */
+    color: azure;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+.home{
+
+    position: fixed;
+    right: 90px;
+    top: 20px;
+    width: 80px;
+    height: 40px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: chartreuse; */
+}
+
+.home span{
+    color: azure;
+    font-size: 18px;
+    line-height: 40px;
+
+}
+
+.more{
+
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    /* background-color: darkcyan; */
+}
+
+
+.more img{
+
+    width: 40px;
+    height: 40px;
+}
+
+
+.showMore{
+
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(19, 18, 18);
+
+    left: 0;
+    top: 80px;
+}
+
+
+.hideMore{
+    /* position: fixed; */
+    display: block;
+
+}
+
+
+.showMore li{
+
+    display: inline-block;
+
+    color: rgb(252, 252, 252);
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+    margin-top: 50px;
+    margin-left: 100px;
+
+    cursor:pointer;
+
+}
+
+.showMore li:hover{
+
+    color: darkseagreen;
+}
+
+
+
+
+
+
+/* 网页内容 */
+
+.page_content{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(179, 56, 56);
+    overflow: hidden;
+}
+
+.page1{background-color: rgb(233, 186, 132)}
+.page2{background-color: lightblue}
+.page3{background-color: lightgreen}
+.page4{background-color: teal}
+.page5{background-color: tomato}
+
+
+/* 页面尺寸 */
+.pageSize{
+
+    /* width: 100%; */
+    height: 600px;
+    position: relative;
+}
+
+/* 轮播点 */
+.points{
+
+    width: 30px;
+    height: 220px;
+    /* background-color: darkseagreen; */
+    position: fixed;
+    right: 20px;
+    top: 30%;
+}
+
+/* 轮播 */
+.points li{
+
+    width: 20px;
+    height: 20px;
+    background-color: rgb(253, 253, 255);
+    margin: 16px 0;
+    border-radius:50%;
+    border: 1px double rgb(255, 255, 255);
+    cursor:pointer;
+
+}
+
+.points li.pointState{
+    /* border: 1px double rgb(238, 61, 38); */
+    background-color: rgb(95, 97, 99);
+
+}
+
+.bg-1.img{
+
+    width: 100%;
+    height: 600px; 
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.describe{
+
+    position: fixed;
+    width: 750px;
+    height: 250px;
+    left: 30px;
+    top: 250px;
+
+    text-indent: 50px;
+    /* font-weight: bolder; */
+    line-height: 50px;
+
+    color: azure;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.moving .describe{
+
+
+    left: 90px;
+}
+
